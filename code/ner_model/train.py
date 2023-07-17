@@ -14,13 +14,11 @@ import warnings
 from collections import defaultdict
 import torch
 from sklearn.metrics import classification_report
-import pickle
-import torch.nn as nn
 import numpy as np
-from transformers import BertConfig, BertTokenizer, AlbertConfig, AdamW, get_linear_schedule_with_warmup, AutoTokenizer
+from transformers import BertConfig, BertTokenizer, AdamW, get_linear_schedule_with_warmup, AutoTokenizer
 from optimization import BertAdam
 from config import Config
-from ner_model import BertForNameEntityRecognition
+from code.ner_model import BertForNameEntityRecognition
 from tqdm import tqdm
 from utils import DataLoader
 
