@@ -1,13 +1,6 @@
 import torch.nn as nn
 import torch
 
-"""
-this is a bilistm network as utilities
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 8/15/2022 3:48 PM
-"""
-
 
 class bilstm(nn.Module):
     def __init__(self, embedding_dim, hidden_size, num_layers, tag_size, dropout_rate, is_layer_norm):

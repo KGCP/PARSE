@@ -9,10 +9,6 @@ from ArxivAbbreviationMap import ABBREVIATION_MAP
 
 """
 This script is for calculating the category of papers collection 
-   
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 7/16/2022 3:59 PM
 """
 
 def cleanCategoryDict(categoryDict):

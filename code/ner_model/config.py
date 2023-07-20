@@ -1,9 +1,4 @@
-"""
-This is config file for NER model
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 7/24/2022 5:58 PM
-"""
+
 import os
 
 

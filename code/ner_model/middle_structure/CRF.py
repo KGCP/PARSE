@@ -4,11 +4,6 @@ from torch import nn, optim
 from torch.nn import init
 import numpy as np
 
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 8/28/2022 12:46 AM
-"""
 
 def log_sum_exp(tensor: torch.Tensor,
               dim: int = -1,

@@ -1,8 +1,4 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 26/9/2022 10:48 pm
-"""
+
 import json
 import os
 import numpy as np

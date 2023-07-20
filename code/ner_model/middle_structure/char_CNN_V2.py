@@ -1,8 +1,4 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 1/5/2023 1:44 am
-"""
+
 import torch.nn as nn
 
 class CharacterLevelCNN(nn.Module):

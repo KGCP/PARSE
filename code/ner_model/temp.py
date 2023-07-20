@@ -1,8 +1,4 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 28/4/2023 1:06 am
-"""
+
 
 from transformers import BertTokenizer
 

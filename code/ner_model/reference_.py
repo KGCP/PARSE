@@ -1,9 +1,4 @@
 
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 8/27/2022 11:48 PM
-"""
 
 MODEL_CLASSES = {
     ## bert ernie bert_wwm bert_wwwm_ext

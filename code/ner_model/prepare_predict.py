@@ -1,8 +1,4 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 27/9/2022 8:50 pm
-"""
+
 import re
 
 if __name__ == '__main__':

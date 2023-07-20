@@ -1,9 +1,4 @@
-"""
-this file is for splitting training, validation and testing dataset
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 12/9/2022 2:32 pm
-"""
+
 import os.path
 
 import pandas as pd

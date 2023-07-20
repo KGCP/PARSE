@@ -1,8 +1,4 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 5/2/2023 1:16 am
-"""
+
 from datetime import datetime
 import hashlib
 import os.path

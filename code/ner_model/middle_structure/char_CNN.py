@@ -1,8 +1,3 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 20/9/2022 2:09 am
-"""
 
 # -*- coding: utf-8 -*-
 import torch.nn as nn

@@ -1,8 +1,4 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 11/3/2023 2:53 am
-"""
+
 import json
 import os
 

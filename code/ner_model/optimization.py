@@ -19,11 +19,6 @@
 # limitations under the License.
 """PyTorch optimization for BERT model."""
 
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 8/20/2022 2:35 AM
-"""
 
 import math
 import torch

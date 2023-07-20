@@ -1,8 +1,3 @@
-"""
-author: Bowen Zhang
-contact: bowen.zhang1@anu.edu.au
-datetime: 30/10/2022 9:04 pm
-"""
 
 from transformers import BartTokenizer, PegasusTokenizer
 from transformers import BartForConditionalGeneration, PegasusForConditionalGeneration
