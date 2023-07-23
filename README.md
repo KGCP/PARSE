@@ -1,8 +1,18 @@
-# Knowledge Graph Construction Pipeline (KGCP)
+![Pipeline_Small](docs/pipeline_small.png)
 
-This repository contains the code for our research paper titled "Automated Construction of Academic Knowledge Graph (ASKG) using KGCP". Our project's primary focus is to expand the academic knowledge graph automatically by extracting fine-grained knowledge from academic papers, particularly those related to computer science.
+___
+
+# Papers And Relationships Semantic Extraction (PARSE)
+
+This repository contains the code for our research paper titled "ASKG: An Approach to Enrich Scholarly Knowledge
+Graphs through Paper Decomposition with Deep
+Learning". Our project's primary focus is to expand the academic knowledge graph automatically by extracting fine-grained knowledge from academic papers, particularly those related to computer science.
+
+---
 
 ## Architecture Overview
+
+![Pipeline](docs/overall_pipeline.png)
 
 The components is divided into two main parts:
 
