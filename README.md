@@ -24,7 +24,77 @@ The components is divided into two main parts:
 
 ### Name Entity Recognition Module
 
-### Name Entity Recognition Module
+![Pipeline](docs/NER_model.jpeg)
+Figure shows the structure of our proposed NER module. The NER model can be divided into 4 main parts. The first part is the input layer for cleaning the raw academic paper text acquired from the MEL & TNNT system and feature engineering. The second is the word embedding part. All the words are tokenized and embedded with pre-trained large language models in this part. Then in the third part, the word embeddings are input into the BiLSTM layer for feature learning. Finally, in the last part of this model, the output layer, the linear CRF layer will calculate the tag score and map the predefined tag. 
+
+The output of the NER module is a JSON format file. In this NER model, all identified entities are classified into 7 scientific types shown in the following tables.
+
+| Types             | Definition |
+| ----------------- | ---------- |
+| research problem  | theme of the investigation |
+| method            | existing protocols used to support the solution |
+| solution          | novel contribution of a work that solves the research problem |
+| tool              | found by asking the question “Using what?” or “By which means?” |
+| resource          | names of existing data and other references to utilities like the Web, Encyclopedia, etc., used to address the research problem or used in the solution |
+| dataset           | name of a dataset |
+| language          | natural language focus of a work |
+
+The sample output is shown below:
+```json
+{
+  "RESEARCH_PROBLEM": 
+    "computational linguistics": {
+        "position": [
+        [1713, 1714]
+      ],
+      "sentence": [
+        "transforming a sentence into its meaning representation also has received considerable attention within the computational linguistics community."
+      ]
+    }
+}
+```
+The following is enriched ontology after NER module:
+![Pipeline](docs/ASKG_NER.png)
+
+### Name Entity Linking Module
+Name entity linking is an important task in knowledge graph construction. NEL mainly focuses on linking the identified name entities to their corresponding entries in the knowledge base. NEL can help improve the relevance and context relationship between scholarly knowledge graphs and make keyword search and navigation possible.
+
+NEL also contributes to enhancing storage efficiency and computational speed. By applying NEL, duplication of entities and triples can be notably reduced. The model achieves this by identifying and merging entities that are identical or highly similar. This process not only conserves storage space but also optimizes the knowledge graph computing speed.
+
+The NEL module output is like the following:
+```json
+{
+  "RESEARCH_PROBLEM": {
+    "computational linguistics": {
+      "position": [
+        [1713,1714]
+      ],
+      "sentence": [
+        "transforming a sentence into its meaning representation also has received considerable attention within the computational linguistics community"
+      ],
+      "is_matched": true,
+      "exact_match": true,
+      "wikidata_ID": "Q182557",
+      "wikidata_desc": "interdisciplinary field",
+      "matched_words": "computational linguistics",
+      "cosine similarity": 1.0
+    }
+  }
+}
+```
+The enriched ontology after NEL module is shown below:
+![Pipeline](docs/ASKG_NEL.png)
+
+### Automatic Summarization and Keyword Extraction Module
+In our pipeline, we integrate BRIO model to conduct the text summarization work. we also integrate the KeyBERT model into our pipeline.
+
+The enriched ontology after automatic summarization and keyword extraction module is shown below:
+![Pipeline](docs/ASKG_Summary.png)
+
+### MEL & TNNT Module
+MEL \& TNNT, when combined, provide us with a powerful toolset that can extract textual content from various file formats and identify named entities using natural language processing technologies. 
+The enriched ontology after MEL & TNNT module is shown below:
+![Pipeline](docs/ASKG_TNNT.png)
 
 ## Enriched ASKG Ontology
 ![Pipeline](docs/ASKG_ALL.png)
