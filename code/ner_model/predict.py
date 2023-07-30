@@ -11,8 +11,6 @@ import torch
 from code.ner_model import BertForNameEntityRecognition
 from utils import DataLoader
 
-#sys.path.append('/Users/bowenzhang/Library/CloudStorage/OneDrive-個人/Programming/PycharmProjects/anu-scholarly-kg/src/Papers/Models/models/nel_models')
-
 config = Config(mode="ssh")
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',

@@ -13,8 +13,8 @@ if __name__ == "__main__":
         input_path = "../../../ASKG_Paper_Dataset/keyword"
         output_dir = "../../../ASKG_Paper_Dataset/summarization"
     else:
-        input_path = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/keyword"
-        output_dir = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/summarization"
+        input_path = "/home/users/u000000/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/keyword"
+        output_dir = "/home/users/u000000/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/summarization"
 
     IS_CNNDM = True  # whether to use CNNDM dataset or XSum dataset
     LOWER = False

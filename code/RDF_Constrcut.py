@@ -28,7 +28,7 @@ mode = "ssh"
 
 tnnt_list = []
 if mode == "ssh":
-    json_file = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/RDF/ASKG_wiki_dict.json"
+    json_file = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/RDF/ASKG_wiki_dict.json"
 else:
     json_file = "ASKG_wiki_dict.json"
 with open(json_file, 'r', encoding='utf-8') as file:
@@ -297,7 +297,7 @@ def get_paper_section_loc_char(paper_id):
     result = {}
 
     if mode == "ssh":
-        splited_paper_path = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/splitted_papers"
+        splited_paper_path = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/ASKG_Paper_Dataset/splitted_papers"
     else:
         splited_paper_path = "../ASKG_Paper_Dataset/splitted_papers"
 
@@ -470,7 +470,7 @@ def construct_KG_Paper_Section(ASKG, paper_id, paper_info, json_data):
     if mode == "local":
         input_path_excerpt = "../ASKG_Paper_Dataset/AcademicEntity"
     else:
-        input_path_excerpt = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/AcademicEntity"
+        input_path_excerpt = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/ASKG_Paper_Dataset/AcademicEntity"
 
     #add excerpt part to ASKG
     if paper_id == "1607.08822":
@@ -481,7 +481,7 @@ def construct_KG_Paper_Section(ASKG, paper_id, paper_info, json_data):
             ASKG = construct_KG_Excerpt_Academic_Entity(ASKG, excerpt_result, paper_id, section_dict, paper_info)
 
     if mode == "ssh":
-        input_path_tnnt_result = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/MEL_TNNT_NER_Result"
+        input_path_tnnt_result = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/ASKG_Paper_Dataset/MEL_TNNT_NER_Result"
     else:
         input_path_tnnt_result = "../ASKG_Paper_Dataset/MEL_TNNT_NER_Result"
 
@@ -507,14 +507,14 @@ def create_tnnt_list(input_path_tnnt_result):
 
 if __name__ == "__main__":
     if mode == "ssh":
-        input_path_paper_info = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/paper_info/papers_info.json"
-        input_path_paper = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/summarization"
+        input_path_paper_info = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/ASKG_Paper_Dataset/paper_info/papers_info.json"
+        input_path_paper = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/ASKG_Paper_Dataset/summarization"
     else:
         input_path_paper_info = "../ASKG_Paper_Dataset/paper_info/papers_info.json"
         input_path_paper = "../ASKG_Paper_Dataset/summarization"
 
     if mode == "ssh":
-        input_path_tnnt_result = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/MEL_TNNT_NER_Result"
+        input_path_tnnt_result = "/home/users/u000000/askg/a-scholarly-kg/src/Papers/ASKG_Paper_Dataset/MEL_TNNT_NER_Result"
     else:
         input_path_tnnt_result = "../ASKG_Paper_Dataset/MEL_TNNT_NER_Result"
 
@@ -541,8 +541,8 @@ if __name__ == "__main__":
 
             rdf_ttl_data = ASKG.serialize(format='ttl') #ttl
             if mode == "ssh":
-                output_path = f"/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/RDF/ASKG_{cnt}.ttl"
-                wiki_dict_output_path = f"/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/RDF/ASKG_{cnt}_wiki_dict.json"
+                output_path = f"/home/users/u000000/askg/anu-scholarly-kg/src/Papers/RDF/ASKG_{cnt}.ttl"
+                wiki_dict_output_path = f"/home/users/u000000/askg/anu-scholarly-kg/src/Papers/RDF/ASKG_{cnt}_wiki_dict.json"
 
                 with open(output_path, "wb") as f:
                     f.write(rdf_ttl_data.encode("utf-8"))

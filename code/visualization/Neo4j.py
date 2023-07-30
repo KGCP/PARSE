@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     neo4j_graph.run("CALL n10s.graphconfig.init({ handleVocabUris: 'MAP'})")
 
-    KG_path = "file:///Users/bowenzhang/Library/CloudStorage/OneDrive-Personal/Programming/PycharmProjects/anu-scholarly-kg/src/Papers/RDF/ASKG_93.ttl"
+    KG_path = "file:///Users/u000000/Library/CloudStorage/OneDrive-Personal/Programming/PycharmProjects/anu-scholarly-kg/src/Papers/RDF/ASKG_93.ttl"
     result = neo4j_graph.run(f"CALL n10s.rdf.import.fetch('{KG_path}', 'Turtle')")
 
     for record in result:

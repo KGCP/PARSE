@@ -8,7 +8,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 from nltk.corpus import wordnet
 
-cache_file = '/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/Models/models/nel_models/cache.json'
+cache_file = '/home/users/u000000/askg/anu-scholarly-kg/src/Papers/Models/models/nel_models/cache.json'
 if os.path.exists(cache_file):
     with open(cache_file, 'r') as f:
         cached_requests = json.load(f)
@@ -107,7 +107,7 @@ def check_exact_match(raw_text, entity, ner_dict, c, key):
 
 
 def getWikidata(ner_dict, mode, remove_stopwords, try_lemmatize, min_length, max_length, filename):
-    output_path = f"/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/NEL_result/{filename}"
+    output_path = f"/home/users/u000000/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/NEL_result/{filename}"
     all_match_list1 = []
     all_match_list2 = []
     wiki_res_dict1 = {}
@@ -214,7 +214,7 @@ def request_wiki(entity):
 
 
 if __name__ == '__main__':
-    path = "/home/users/u7274475/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/NER_result"
+    path = "/home/users/u000000/askg/anu-scholarly-kg/src/Papers/ASKG_Paper_Dataset/NER_result"
     mode = "all"
     remove_stopwords = True
     try_lemmatize = True
